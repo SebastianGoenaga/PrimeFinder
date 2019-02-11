@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class Control extends Thread {
 
-	private final static int NTHREADS = 10;
+	private final static int NTHREADS = 2;
 	private final static int MAXVALUE = 30000000;
 	private final static int TMILISECONDS = 5000;
 
@@ -50,7 +50,7 @@ public class Control extends Thread {
 		Scanner sc = new Scanner(System.in);
 		while (true) {
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(TMILISECONDS);
 				flag = false;
 				for (PrimeFinderThread p : pft) {
 					System.out.println(p.getPrimes().size());
